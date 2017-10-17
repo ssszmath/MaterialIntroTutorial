@@ -51,8 +51,12 @@ public class MaterialTutorialFragment extends Fragment {
         ImageView imageViewFront = (ImageView) v.findViewById(R.id.fragment_help_tutorial_imageview);
         ImageView imageViewBack = (ImageView) v.findViewById(R.id.fragment_help_tutorial_imageview_background);
         TextView textViewSubTitle = (TextView) v.findViewById(R.id.fragment_help_tutorial_subtitle_text);
+        
+        textViewSubTitle.setTypeface(introtf);
 
         TextView textView = (TextView) v.findViewById(R.id.fragment_help_tutorial_text);
+        textView.setTypeface(introtf);
+            
         if (!TextUtils.isEmpty(tutorialItem.getTitleText())) {
             textView.setText(tutorialItem.getTitleText());
         } else if (tutorialItem.getTitleTextRes() != -1) {
